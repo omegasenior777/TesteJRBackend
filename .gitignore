@@ -1,0 +1,50 @@
+﻿# Build e pacotes
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.nuget.cache
+*.nuget.props
+*.nuget.dgspec.json
+*.snupkg
+*.nupkg
+
+# Logs e depuração
+*.log
+TestResults/
+
+# Configuração do usuário
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Arquivos gerados
+GeneratedFiles/
+
+# Configurações do Rider e VS Code
+.idea/
+*.code-workspace
+
+# Configuração do Dotnet
+*.dotnet-tools.json
+
+# Docker e conteinerização
+**/[Dd]ockerfile*
+**/docker-compose*
+
+# Configuração do Secret Manager
+secrets.json
+
+# Certificados de desenvolvimento
+*.pfx
+*.p12
+
+# Configurações de publicação
+.publish/
+
+# Pacotes gerenciados pelo SDK
+.nuget/
+/.vs/apiToDo/FileContentIndex
