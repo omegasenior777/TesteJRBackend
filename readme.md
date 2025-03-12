@@ -1,39 +1,112 @@
-## INSTRUÇÕES PARA O TESTE TÉCNICO
+# API ToDo - Documentação
 
-- Crie um fork deste projeto (https://github.com/CAPYS-IT/TesteJRBackend).
-  É preciso estar logado na sua conta Github;
-- Quando você começar, faça um commit vazio com a mensagem "Iniciando o teste de tecnologia" e quando terminar, faça o commit com uma mensagem "Finalizado o teste de tecnologia";
-- Commit após cada ciclo de refatoração pelo menos;
-- Não use branches;
-- Você deve prover evidências suficientes de que sua solução está completa indicando, no mínimo, que ela funciona;
-- Não há restrição quanto ao uso de bibliotecas de apoio;
-- No final envie para o RH o link do seu projeto.
-- Uso do Visual Studio 2022
+## Descrição
+Esta API permite a criação, leitura, atualização e remoção de tarefas. Ela foi desenvolvida utilizando **ASP.NET Core** e segue boas práticas de desenvolvimento de APIs RESTful.
 
-## O TESTE
+## Tecnologias Utilizadas
+- .NET 5+
+- ASP.NET Core
+- C#
 
-- Implementar o metodo lstTarefas da classe Tarefas na Tarefascontroller/lstTarefas e retorna a lista de tarefas. **CODE** 200.
-- Implementar o metodo InserirTarefa da classe Tarefas na Tarefascontroller/InserirTarefas e retorna a lista de tarefas. **CODE** 200.
-- Implementar o metodo DeletarTarefa da classe Tarefas na Tarefascontroller/DeleteTask e retorna a lista de tarefas. **CODE** 200.
+## Como Executar o Projeto
+### **Requisitos**
+- .NET 5 ou superior instalado
+- Editor de código como Visual Studio ou VS Code
+
+### **Passos para execução**
+1. Clone o repositório:
+   ```sh
+   git clone https://github.com/seu-repositorio/apiToDo.git
+   ```
+2. Acesse a pasta do projeto:
+   ```sh
+   cd apiToDo
+   ```
+3. Execute o projeto:
+   ```sh
+   dotnet run
+   ```
+4. Acesse a API via navegador ou ferramenta como Postman:
+   ```sh
+   http://localhost:5000/v1/tarefas
+   ```
 
 ---
 
-- Descreva oque esta acontecendo com comentarios em cada linha de codigo do metodo DeletarTarefa da classe Tarefas.
+## **Rotas da API**
 
-- Faça o tratamento de erro do metodo DeletarTarefa da classe Tarefas. <br/> Parametros:
-- O usuario esta tentando deletar a tarefa de codigo 1458.
+### **Listar todas as tarefas**
+- **Endpoint:** `GET /v1/tarefas`
+- **Retorno:**
+  ```json
+  [
+    {
+      "iD_TAREFA": 1,
+      "dS_TAREFA": "Fazer Compras"
+    },
+    {
+      "iD_TAREFA": 2,
+      "dS_TAREFA": "Fazer Atividade da Faculdade"
+    },
+    {
+      "iD_TAREFA": 3,
+      "dS_TAREFA": "Subir Projeto de Teste no GitHub"
+    }
+  ]
+  ```
 
----
+### **Listar uma tarefa pelo ID**
+- **Endpoint:** `GET /v1/tarefas/{id}`
+- **Exemplo de Resposta:**
+  ```json
+  {
+    "ID_TAREFA": 1,
+    "DS_TAREFA": "Minha primeira tarefa"
+  }
+  ```
 
-## BÔNUS
+### **Criar uma nova tarefa**
+- **Endpoint:** `POST /v1/tarefas`
+- **Body:**
+  ```json
+  {
+    "DS_TAREFA": "Nova tarefa"
+  }
+  ```
+- **Resposta:**
+  ```json
+  {
+    "ID_TAREFA": 4,
+    "DS_TAREFA": "Nova tarefa"
+  }
+  ```
+- **Status HTTP:** `201 Created`
 
-- Efetuar tratamento das classes e Controllers com boas praticas seguindo os padrões REST.
-- Criar Metodo de Atualizar um item da lista, passando uma objeto e retornando a lista atualizada.
-- Criar metodo para pegar um Item da Lista passando um ID e retornando o Objeto da Lista.
+### **Atualizar uma tarefa existente**
+- **Endpoint:** `PATCH /v1/tarefas`
+- **Body:**
+  ```json
+  {
+    "ID_TAREFA": 1,
+    "DS_TAREFA": "Tarefa atualizada"
+  }
+  ```
+- **Resposta:**
+  ```json
+  [
+    {
+      "ID_TAREFA": 1,
+      "DS_TAREFA": "Tarefa atualizada"
+    }
+  ]
+  ```
 
----
+### **Excluir uma tarefa pelo ID**
+- **Endpoint:** `DELETE /v1/tarefas?id={id}`
+- **Resposta:**
+  ```json
+  {
+    "msg": "Tarefa removida com sucesso!"
+  }
+  ```
 
-## PONTOS QUE SERÃO AVALIADOS
-
-- Boas práticas;
-- Estrutura de Codigo.

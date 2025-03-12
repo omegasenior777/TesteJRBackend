@@ -22,11 +22,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
@@ -47,9 +55,9 @@
               "Title": "TarefasController.cs",
               "DocumentMoniker": "C:\\Users\\Cesar H\\Desktop\\CAPYS\\TesteJRBackend\\apiToDo\\Controllers\\TarefasController.cs",
               "RelativeDocumentMoniker": "apiToDo\\Controllers\\TarefasController.cs",
-              "ToolTip": "C:\\Users\\Cesar H\\Desktop\\CAPYS\\TesteJRBackend\\apiToDo\\Controllers\\TarefasController.cs*",
-              "RelativeToolTip": "apiToDo\\Controllers\\TarefasController.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAA+AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Cesar H\\Desktop\\CAPYS\\TesteJRBackend\\apiToDo\\Controllers\\TarefasController.cs",
+              "RelativeToolTip": "apiToDo\\Controllers\\TarefasController.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAowGwAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-11T22:50:42.195Z",
               "EditorCaption": ""
